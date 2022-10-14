@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name = "ColorLetra">
+        <item>Verde</item>
+        <item>Azulado</item>
+        <item>Rojo</item>
+        <item>Por Defecto</item>
+    </array>
+
+
+    <array name ="ColorFondo">
+        <item>Verde</item>
+        <item>Azulado</item>
+        <item>Rojo</item>
+        <item>Por Defecto</item>
+    </array>
+
+    <string-array name = "FuenteLetra">
+        <item>M1</item>
+        <item>MontserratAlter</item>
+        <item>RobotoItalic</item>
+        <item>RobotoMonoVariable</item>
+    </string-array>
+
+    <string-array name = "TamañoLetra">
+        <item>Pequeña</item>
+        <item>Mediana</item>
+        <item>Grande</item>
+    </string-array>
+
+</resources>

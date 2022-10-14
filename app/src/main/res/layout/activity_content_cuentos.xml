@@ -1,0 +1,192 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/imageViewCuentos"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/cero" />
+
+
+        <TextView
+            android:id="@+id/textViewContent"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/m1"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@id/textFin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView"
+            app:layout_constraintVertical_bias="0.113"></TextView>
+
+        <TextView
+            android:id="@+id/textFin"
+            android:layout_width="305dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/m1"
+            android:gravity="center|center_horizontal"
+            android:text="FIN!"
+            android:textColor="#355764"
+            android:textSize="35dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewContent"
+            app:layout_constraintBottom_toTopOf="@+id/libro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></TextView>
+
+
+        <ImageView
+            android:id="@+id/libro"
+            android:layout_width="117dp"
+            android:layout_height="114dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@id/moralejabueno"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textFin"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/cuentoscortos" />
+
+        <TextView
+            android:id="@+id/moralejabueno"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/m1"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/moralejaImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.459"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/libro"
+            app:layout_constraintVertical_bias="0.573"></TextView>
+
+        <ImageView
+            android:id="@+id/moralejaImg"
+            android:layout_width="117dp"
+            android:layout_height="114dp"
+            app:layout_constraintBottom_toTopOf="@id/audioLibro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/moralejabueno"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/moraleja"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/moralejaText"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/m1"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/cuento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/moralejaImg"
+            app:layout_constraintVertical_bias="0.164"></TextView>
+
+        <TextView
+            android:id="@+id/audioLibro"
+            android:layout_width="305dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/m1"
+            android:gravity="center|center_horizontal"
+            android:text="AUDIOLIBRO!"
+            android:textColor="#355764"
+            android:textSize="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/moralejaText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cuento"
+            app:layout_constraintVertical_bias="1.0"></TextView>
+
+        <ImageView
+            android:id="@+id/cuento"
+            android:layout_width="117dp"
+            android:layout_height="114dp"
+            app:layout_constraintBottom_toBottomOf="@id/mediaController"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/moralejaText"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ipod_101096" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="8dp"
+            android:clipToOutline="false"
+            android:gravity="center|center_horizontal"
+            android:text="Simbad el marino"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textViewContent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewCuentos"
+            app:layout_constraintVertical_bias="0.29000002" />
+
+        <MediaController
+            android:id="@+id/mediaController"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rocket"
+            app:layout_constraintVertical_bias="0.0"></MediaController>
+
+        <ImageView
+            android:id="@+id/rocket"
+            android:src="@drawable/rocket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/mediaController"
+            app:layout_constraintTop_toBottomOf="@+id/cuento" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

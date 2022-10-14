@@ -1,0 +1,20 @@
+package edu.uoc.cardview;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class Settings extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_settings);
+
+        AdjustFragment p=new AdjustFragment();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentP,p)
+                .commit();
+    }
+}

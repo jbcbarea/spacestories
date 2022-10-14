@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Visualización">
+        <SwitchPreferenceCompat
+            app:key="Vista"
+            app:title="Vista Linear/Cuadrícula"
+            android:summary="Cambia la vista en la que se muestran los Cuentos: Linear(Activado)/Cuadrícula(Desactivado)"
+            android:icon="@drawable/ic_baseline_grid_view_24"
+            />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title = "Personalizar Letra">
+        <ListPreference
+            android:key="tamaño"
+            android:title="Personalizar Tamaño Letra"
+            android:summary="Seleccione el tamaño de letra para sus Cuentos"
+            android:entries="@array/TamañoLetra"
+            android:entryValues="@array/TamañoLetra"
+            android:icon="@drawable/ic_baseline_format_size_24" />
+
+        <ListPreference
+            android:key="font"
+            android:title="Personalizar Tipo de Letra"
+            android:summary="Seleccione el tipo de letra para sus Cuentos"
+            android:entries="@array/FuenteLetra"
+            android:entryValues="@array/FuenteLetra"
+            android:icon="@drawable/ic_baseline_font_download_24" />
+
+        <ListPreference
+            android:key="color"
+            android:title="Personalizar Color de la Letra"
+            android:summary="Seleccione el Color de letra para sus Cuentos"
+            android:entries="@array/ColorLetra"
+            android:entryValues="@array/ColorLetra"
+            android:icon="@drawable/ic_baseline_color_lens_24" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+
+        android:title="Personalizar Color Fondo"
+        app:fontFamily="@font/m1">
+        <ListPreference
+            android:entries="@array/ColorFondo"
+            android:entryValues="@array/ColorFondo"
+            android:icon="@drawable/ic_baseline_format_color_fill_24"
+            android:key="colorFondo"
+            android:summary="Seleccione el color de fondo para sus Cuentos"
+            android:title="Personalizar Color de Fondo" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
